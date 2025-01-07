@@ -10,7 +10,7 @@
 <body class="bg-gray-50">
     <!-- Hero Section with Background Pattern -->
     <div class="hero-pattern relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/10 to-blue-900/10"></div>
+        <!-- <div class="absolute inset-0 bg-gradient-to-br from-gray-900/10 to-blue-900/10"></div>  -->
         <nav class="relative container mx-auto px-7 py-5 flex justify-between items-center">
             <div class="flex items-center">
                 <img src="assets/images/logo.svg" alt="SeisAI Logo" class="h-12">
@@ -20,10 +20,6 @@
                 <a href="#expertise" class="nav-link text-custom hover:text-black">Expertise</a>
                 <a href="#team" class="nav-link text-custom hover:text-black">Team</a>
                 <a href="#case-studies" class="nav-link text-custom hover:text-black">Work</a>
-                <!-- <a href="#services" class="nav-link">Services</a>
-                <a href="#expertise" class="nav-link">Expertise</a>
-                <a href="#team" class="nav-link">Team</a>
-                <a href="#case-studies" class="nav-link">Work</a> -->
                 <a href="#contact" class="bg-white text-blue-900 px-6 py-2 rounded-md hover:bg-gray-100">Contact</a>
             </div>
         </nav>
@@ -158,7 +154,7 @@
     <!-- Team Section -->
     <section id="team" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Leadership</h2>
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">The Team</h2>
             <div class="max-w-4xl mx-auto">
                 <div class="flex flex-col md:flex-row items-center gap-12 bg-white p-8 rounded-lg shadow-lg">
                     <img src="assets/images/profile.jpg" alt="Dr. Sacha Lapins" class="rounded-lg w-64 h-64 object-cover">
@@ -184,7 +180,7 @@
             <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Featured Work</h2>
             <div class="max-w-4xl mx-auto">
                 <div class="bg-gray-50 rounded-lg p-8 shadow-lg">
-                    <h3 class="text-2xl font-semibold mb-6">Advanced DAS Signal Enhancement</h3>
+                    <h3 class="text-2xl font-semibold mb-6">DAS Signal Enhancement Using Real-World Noisy Data</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                         <div>
@@ -197,7 +193,7 @@
                         <div>
                             <h4 class="text-lg font-semibold mb-4">Solution</h4>
                             <p class="text-gray-600 mb-4">
-                                Custom deep learning model optimized for efficient processing and deployment in production environments.
+                                Weakly supervised deep learning model optimized for retaining high-frequency signal content, efficient processing and deployment in production environments.
                             </p>
                         </div>
                     </div>
@@ -206,16 +202,16 @@
                         <h4 class="text-lg font-semibold mb-4">Key Achievements</h4>
                         <ul class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <li class="card bg-white p-4 rounded shadow">
-                                <span class="block text-blue-600 font-bold text-lg mb-2">10x</span>
-                                Signal quality improvement
+                                <span class="block text-blue-600 font-bold text-lg mb-2">Vastly</span>
+                                Improved signal-to-noise levels
                             </li>
                             <li class="card bg-white p-4 rounded shadow">
                                 <span class="block text-blue-600 font-bold text-lg mb-2">Real-time</span>
-                                Processing capability
+                                Processing capability (fraction of acquisition time)
                             </li>
                             <li class="card bg-white p-4 rounded shadow">
-                                <span class="block text-blue-600 font-bold text-lg mb-2">Scalable</span>
-                                Enterprise deployment
+                                <span class="block text-blue-600 font-bold text-lg mb-2">Optimized</span>
+                                Cross-system processing and easy deployment
                             </li>
                         </ul>
                     </div>
@@ -230,20 +226,20 @@
             <h2 class="text-3xl font-bold text-center text-white mb-12">Start a Conversation</h2>
             <div class="max-w-xl mx-auto">
                 <div class="bg-white rounded-lg p-8 shadow-lg">
-                    <form class="space-y-6">
+                    <form action="https://script.google.com/macros/s/AKfycbz-aJJqnnEpdP4-Eb5_g628FTfE5nTHHpb45NzHkK46otqc0_61PRcx23PGhIvoJsnp/exec" method="POST" class="space-y-6" onsubmit="return submitForm(event)">
                         <div>
                             <label class="block text-gray-700 mb-2">Name</label>
-                            <input type="text" class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            <input type="text" name="name" class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-2">Email</label>
-                            <input type="email" class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            <input type="email" name="email" class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-2">Message</label>
-                            <textarea class="w-full p-3 border rounded-md h-32 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            <textarea name="message" class="w-full p-3 border rounded-md h-32 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required></textarea>
                         </div>
-                        <button class="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors">
+                        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors">
                             Send Message
                         </button>
                     </form>
@@ -252,10 +248,55 @@
         </div>
     </section>
 
+    <!-- JavaScript for Form Submission -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        async function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const timestamp = Date.now(); // Current time in milliseconds
+
+            // Generate HMAC signature
+            const message = `${timestamp}:${form.name.value}:${form.email.value}:${form.message.value}`;
+            const signature = CryptoJS.HmacSHA256(message, 'none').toString();
+
+            // Prepare form data
+            const data = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value,
+                timestamp: timestamp,
+                signature: signature
+            };
+
+            try {
+                // Send form data to the backend
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: JSON.stringify(data),
+                    headers: { "Content-Type": "application/json" }
+                });
+
+                const result = await response.json();
+
+                if (result.status === "success") {
+                    alert("Your message has been sent successfully!");
+                    form.reset();
+                } else {
+                    alert("There was an error: " + result.message);
+                }
+            } catch (error) {
+                alert("An unexpected error occurred. Please try again.");
+            }
+        }
+    </script>
+
+
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="text-center">
-                <img src="assets/images/logo4.png" alt="SeisAI Logo" class="h-10 mx-auto mb-4">
+                <img src="assets/images/logo.svg" alt="SeisAI Logo" class="h-10 mx-auto mb-4">
                 <p class="text-gray-400">© 2025 SeisAI Ltd. All rights reserved.</p>
             </div>
         </div>
