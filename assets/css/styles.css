@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .hero-pattern {
-    background-image: url('../images/mountain-bg.svg');
+    background-image: url('/assets/images/mountain-bg.svg');
     background-size: cover;
     background-position: center;
     min-height: 600px;
