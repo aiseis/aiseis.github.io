@@ -12,15 +12,36 @@
     <div class="hero-pattern relative z-10 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-blue-900/10"></div> 
         <nav class="relative container mx-auto px-7 py-5 flex justify-between items-center">
+            <!-- Logo -->
             <div class="flex items-center">
                 <img src="assets/images/logo.svg" alt="SeisAI Logo" class="h-12">
             </div>
+
+            <!-- Dekstop menu -->
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#services" class="nav-link text-custom hover:text-black">Services</a>
                 <a href="#expertise" class="nav-link text-custom hover:text-black">Expertise</a>
                 <a href="#team" class="nav-link text-custom hover:text-black">Team</a>
                 <a href="#case-studies" class="nav-link text-custom hover:text-black">Work</a>
                 <a href="#contact" class="bg-custom text-white px-6 py-2 rounded-md hover:bg-gray-800">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" class="block md:hidden text-custom focus:outline-none">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-lg z-20">
+                <div class="flex flex-col items-center py-4 space-y-4">
+                    <a href="#services" class="nav-link text-custom hover:text-black">Services</a>
+                    <a href="#expertise" class="nav-link text-custom hover:text-black">Expertise</a>
+                    <a href="#team" class="nav-link text-custom hover:text-black">Team</a>
+                    <a href="#case-studies" class="nav-link text-custom hover:text-black">Work</a>
+                    <a href="#contact" class="bg-custom text-white px-6 py-2 rounded-md hover:bg-gray-800">Contact</a>
+                </div>
             </div>
         </nav>
         
@@ -317,5 +338,13 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile Menu Toggle Script
+        document.getElementById('menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
